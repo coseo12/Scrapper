@@ -1,1 +1,1 @@
-# GO Scrapper
+# Go Scrapper
