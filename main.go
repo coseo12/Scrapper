@@ -21,6 +21,7 @@ type extractedJob struct {
 }
 
 var baseURL string = "https://kr.indeed.com/jobs?q=vue.js&limit=50"
+var viewURL string = "https://kr.indeed.com/viewJob?jk="
 
 func main() {
 	var jobs []extractedJob
@@ -55,7 +56,7 @@ func writeJobs(jobs []extractedJob) {
 
 	for _, job := range jobs {
 		jobSlice := []string{
-			job.id,
+			viewURL + job.id,
 			job.title,
 			job.location,
 			job.salary,
